@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit SchoolLevel{% endblock %}
+
+{% block body %}
+    <h1>Edit SchoolLevel</h1>
+
+    {{ include('school_level/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('school_level_index') }}">back to list</a>
+
+    {{ include('school_level/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SchoolList index{% endblock %}
+
+{% block body %}
+    <h1>SchoolList index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Available_seats</th>
+                <th>Elected_seats</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for school_list in school_lists %}
+            <tr>
+                <td>{{ school_list.id }}</td>
+                <td>{{ school_list.availableSeats }}</td>
+                <td>{{ school_list.electedSeats }}</td>
+                <td>
+                    <a href="{{ path('school_list_show', {'id': school_list.id}) }}">show</a>
+                    <a href="{{ path('school_list_edit', {'id': school_list.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('school_list_new') }}">Create new</a>
+{% endblock %}

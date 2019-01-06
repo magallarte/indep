@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SchoolLevel index{% endblock %}
+
+{% block body %}
+    <h1>SchoolLevel index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for school_level in school_levels %}
+            <tr>
+                <td>{{ school_level.id }}</td>
+                <td>{{ school_level.name }}</td>
+                <td>
+                    <a href="{{ path('school_level_show', {'id': school_level.id}) }}">show</a>
+                    <a href="{{ path('school_level_edit', {'id': school_level.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('school_level_new') }}">Create new</a>
+{% endblock %}

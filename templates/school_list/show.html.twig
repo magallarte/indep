@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SchoolList{% endblock %}
+
+{% block body %}
+    <h1>SchoolList</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ school_list.id }}</td>
+            </tr>
+            <tr>
+                <th>Available_seats</th>
+                <td>{{ school_list.availableSeats }}</td>
+            </tr>
+            <tr>
+                <th>Elected_seats</th>
+                <td>{{ school_list.electedSeats }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('school_list_index') }}">back to list</a>
+
+    <a href="{{ path('school_list_edit', {'id': school_list.id}) }}">edit</a>
+
+    {{ include('school_list/_delete_form.html.twig') }}
+{% endblock %}
