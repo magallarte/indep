@@ -9,6 +9,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface; 
 
 /**
  * @Route("/page")
@@ -21,6 +25,16 @@ class PageController extends AbstractController
     public function index(PageRepository $pageRepository): Response
     {
         return $this->render('page/index.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/maternelle", name="page_maternelle", methods={"GET"})
+     */
+    public function maternelle(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/maternelle.html.twig', [
             'pages' => $pageRepository->findAll(),
         ]);
     }

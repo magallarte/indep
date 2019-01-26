@@ -1,0 +1,646 @@
+{% extends 'base.html.twig'%}
+{% block title %}Les Indépendants - Page accueil{% endblock %}
+
+{% block body %}
+
+<!-- Home -->
+
+	<div class="home">
+
+		<!-- Hero Slider -->
+		<div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h2 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Nos enfants sont <span>au coeur</span> de nos préoccupations !</h2>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background2.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h2 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Notre différence, c'est notre <span>indépendance</span> !</h2>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background3.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h2 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Pour des enfants <span>heureux</span> d'aller à l'école !</h2>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">&lt;</span></div>
+			<div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">&gt;</span></div>
+		</div>
+
+	</div>
+
+	<div class="hero_boxes">
+		<div class="hero_boxes_inner">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 hero_box_col">
+						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+							<img src="images/decouvrir_orange.png" alt="">
+							<div class="hero_box_content">
+								<h2 class="hero_box_title">DECOUVRIR</h2>
+								<a href="courses.html" class="hero_box_link">Histoire, Bureau ...</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 hero_box_col">
+						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+							<img src="images/sinformer_orange.png" alt="">
+							<div class="hero_box_content">
+								<h2 class="hero_box_title">S'INFORMER</h2>
+								<a href="courses.html" class="hero_box_link">Infos, Compte-rendus ...</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 hero_box_col">
+						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+							<img src="images/participer_orange.png" alt="">
+							<div class="hero_box_content">
+								<h2 class="hero_box_title">PARTICIPER</h2>
+								<a href="teachers.html" class="hero_box_link">Evènements, Calendrier, ...</a>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-lg-3 hero_box_col">
+						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+							<img src="images/adherer_orange.png" alt="">
+							<div class="hero_box_content">
+								<h2 class="hero_box_title">ADHERER</h2>
+								<a href="teachers.html" class="hero_box_link">Inscription, Liste ...</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Become -->
+
+	<div class="become">
+		<div class="container">
+			<div class="row row-eq-height">
+
+				<div class="col-lg-6 order-2 order-lg-1">
+					<div class="become_title">
+						<h1>Qui sont les Indépendants ? </h1>
+					</div>
+					<p class="become_text">Nous sommes une association de parents d'élèves.<br> Nous représentons les parents ...</p>
+					<div class="become_button text-center trans_200">
+						<a href="#">Découvrir ...</a>
+					</div>
+				</div>
+
+				<div class="col-lg-6 order-1 order-lg-2">
+					<div class="become_image">
+						<img src="images/become.jpg" alt="">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+    <!-- Chiffres clés -->
+
+	<div class="milestones">
+		<div class="milestones_background" style="background-image:url(images/milestones_background.jpg)"></div>
+
+		<div class="container">
+			<div class="row">
+				
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_1.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+						<div class="milestone_counter" data-end-value="750">0</div>
+						<div class="milestone_text">Etablissements</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+						<div class="milestone_counter" data-end-value="120">0</div>
+						<div class="milestone_text">Adhérents</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_3.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+						<div class="milestone_counter" data-end-value="39">0</div>
+						<div class="milestone_text">Commisions / an</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_4.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+						<div class="milestone_counter" data-end-value="3500" data-sign-before="+">0</div>
+						<div class="milestone_text">Evènements / an</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Adhérer -->
+
+	{# <div class="register">
+
+		<div class="container-fluid">
+			
+			<div class="row row-eq-height">
+				<div class="col-lg-6 nopadding">
+					
+					<!-- Adhérer -->
+
+					<div class="register_section d-flex flex-column align-items-center justify-content-center">
+						<div class="register_content text-center">
+							<h1 class="register_title">Register now and get a discount <span>50%</span> discount until 1 January</h1>
+							<p class="register_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempo.</p>
+							<div class="button button_1 register_button mx-auto trans_200"><a href="#">register now</a></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-lg-6 nopadding">
+					
+					<!-- Search -->
+
+					<div class="search_section d-flex flex-column align-items-center justify-content-center">
+						<div class="search_background" style="background-image:url(images/search_background.jpg);"></div>
+						<div class="search_content text-center">
+							<h1 class="search_title">Search for your course</h1>
+							<form id="search_form" class="search_form" action="post">
+								<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Course Name" required="required" data-error="Course name is required.">
+								<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Category">
+								<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Degree">
+								<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">search course</button>
+							</form>
+						</div> 
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div> #}
+
+	<!-- Services -->
+
+	{# <div class="services page_section">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Our Services</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row services_row">
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/earth-globe.svg" alt="">
+					</div>
+					<h3>Online Courses</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/exam.svg" alt="">
+					</div>
+					<h3>Indoor Courses</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/books.svg" alt="">
+					</div>
+					<h3>Amazing Library</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/professor.svg" alt="">
+					</div>
+					<h3>Exceptional Professors</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/blackboard.svg" alt="">
+					</div>
+					<h3>Top Programs</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/mortarboard.svg" alt="">
+					</div>
+					<h3>Graduate Diploma</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+			</div>
+		</div>
+	</div> #}
+
+	<!-- Testimonials -->
+
+	{# <div class="testimonials page_section">
+		<!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
+		<div class="testimonials_background_container prlx_parent">
+			<div class="testimonials_background prlx" style="background-image:url(images/testimonials_background.jpg)"></div>
+		</div>
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>What our students say</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					
+					<div class="testimonials_slider_container">
+
+						<!-- Testimonials Slider -->
+						<div class="owl-carousel owl-theme testimonials_slider">
+							
+							<!-- Testimonials Item -->
+							<div class="owl-item">
+								<div class="testimonials_item text-center">
+									<div class="quote">“</div>
+									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+									<div class="testimonial_user">
+										<div class="testimonial_image mx-auto">
+											<img src="images/testimonials_user.jpg" alt="">
+										</div>
+										<div class="testimonial_name">james cooper</div>
+										<div class="testimonial_title">Graduate Student</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Testimonials Item -->
+							<div class="owl-item">
+								<div class="testimonials_item text-center">
+									<div class="quote">“</div>
+									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+									<div class="testimonial_user">
+										<div class="testimonial_image mx-auto">
+											<img src="images/testimonials_user.jpg" alt="">
+										</div>
+										<div class="testimonial_name">james cooper</div>
+										<div class="testimonial_title">Graduate Student</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Testimonials Item -->
+							<div class="owl-item">
+								<div class="testimonials_item text-center">
+									<div class="quote">“</div>
+									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+									<div class="testimonial_user">
+										<div class="testimonial_image mx-auto">
+											<img src="images/testimonials_user.jpg" alt="">
+										</div>
+										<div class="testimonial_name">james cooper</div>
+										<div class="testimonial_title">Graduate Student</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> #}
+
+	<!-- Events -->
+
+	<div class="events page_section">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Upcoming Events</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class="event_items">
+
+				<!-- Event Item -->
+				<div class="row event_item">
+					<div class="col">
+						<div class="row d-flex flex-row align-items-end">
+
+							<div class="col-lg-2 order-lg-1 order-2">
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">07</div>
+									<div class="event_month">January</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 order-lg-2 order-3">
+								<div class="event_content">
+									<div class="event_name"><a class="trans_200" href="#">Student Festival</a></div>
+									<div class="event_location">Grand Central Park</div>
+									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 order-lg-3 order-1">
+								<div class="event_image">
+									<img src="images/event_1.jpg" alt="https://unsplash.com/@theunsteady5">
+								</div>
+							</div>
+
+						</div>	
+					</div>
+				</div>
+
+				<!-- Event Item -->
+				<div class="row event_item">
+					<div class="col">
+						<div class="row d-flex flex-row align-items-end">
+
+							<div class="col-lg-2 order-lg-1 order-2">
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">07</div>
+									<div class="event_month">January</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 order-lg-2 order-3">
+								<div class="event_content">
+									<div class="event_name"><a class="trans_200" href="#">Open day in the Univesrsity campus</a></div>
+									<div class="event_location">Grand Central Park</div>
+									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 order-lg-3 order-1">
+								<div class="event_image">
+									<img src="images/event_2.jpg" alt="https://unsplash.com/@claybanks1989">
+								</div>
+							</div>
+
+						</div>	
+					</div>
+				</div>
+
+				<!-- Event Item -->
+				<div class="row event_item">
+					<div class="col">
+						<div class="row d-flex flex-row align-items-end">
+
+							<div class="col-lg-2 order-lg-1 order-2">
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">07</div>
+									<div class="event_month">January</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 order-lg-2 order-3">
+								<div class="event_content">
+									<div class="event_name"><a class="trans_200" href="#">Student Graduation Ceremony</a></div>
+									<div class="event_location">Grand Central Park</div>
+									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 order-lg-3 order-1">
+								<div class="event_image">
+									<img src="images/event_3.jpg" alt="https://unsplash.com/@juanmramosjr">
+								</div>
+							</div>
+
+						</div>	
+					</div>
+				</div>
+
+			</div>
+				
+		</div>
+	</div>
+
+    <!-- Maternelle -->
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Maternelle</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row course_boxes">
+				
+				<!-- Maternelle 1 -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="#">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Petits Princes</a></div>
+							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Maternelle 2 -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Rose de France</a></div>
+							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Maternelle 3 -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Jean de la Fontaine</a></div>
+							<div class="card-text">Liste existante. Contacter la "tête" de liste.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row course_boxes">
+				
+				<!-- Maternelle 4 -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="#">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Vert Parc</a></div>
+							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Maternelle 5 -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Madiba</a></div>
+							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Maternelle 6 -->
+				<div class="col-lg-4 course_box">
+					{# <div class="card">
+						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html">Jean de la Fontaine</a></div>
+							<div class="card-text">Liste existante. Contacter la "tête" de liste.</div>
+						</div>
+					</div> #}
+				</div>
+			</div>
+
+			<div class="row services_row">
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/earth-globe.svg" alt="">
+					</div>
+					<h3>Rejoindre les Indépendants</h3>
+					<p>Prenez contact directement auprès de la « tête de liste » de l’école de votre enfant (par mail de préférence).<br>
+						Cet échange sera l’occasion de vous informer sur le rôle des parents délégués et leur implication dans l’école<br>
+					</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/exam.svg" alt="">
+					</div>
+					<h3>Rejoindre une liste</h3>
+					<p>Vous pouvez nous rejoindre grâce à l’adhésion en ligne directement sur notre site.<br>
+					Une cotisation annuelle de 12 euros vous sera demandée afin de participer aux frais de fonctionnement de l’association.<br>
+					Bienvenu(e) !</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/books.svg" alt="">
+					</div>
+					<h3>Créer une liste</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/professor.svg" alt="">
+					</div>
+					<h3>Préparation des élections</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/blackboard.svg" alt="">
+					</div>
+					<h3>Déroulé des élections</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/mortarboard.svg" alt="">
+					</div>
+					<h3>Résultats des élections</h3>
+					<p>Les résultats seront affichés par le chef d’établissement.<br>
+					Le nombre de parents TITULAIRES est égal au nombre de CLASSES de l’établissement, se rajoutent ensuite un nombre égal de SUPPLEANTS.
+					<br>Le rôle des parents délégués va être alors de faire le lien entre les parents et l’école, informer, assister aux conseils d’école.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/professor.svg" alt="">
+					</div>
+					<h3>Préparation d'un conseil d'école</h3>
+					<p>Les CE sont au nombre de 3 dans l’année.<br>Le chef d’établissement fixe un ORDRE DU JOUR qu’il transmet aux parents de chaque liste, lesquels peuvent alors y ajouter les questions / points à soulever / thèmes à aborder.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/blackboard.svg" alt="">
+					</div>
+					<h3>Déroulé d'un conseil d'école</h3>
+					<p>Sont présents : Le chef d’établissement, les maîtres/esses, les atsem (maternelle), les parents d’élèves TITULAIRES de chaque fédération ( à défaut leurs suppléants ), un/des représentants de la mairie.
+					<br>Les différents THEMES sont abordés (Organisation et fonctionnement de l’école, Projets et actions pédagogiques, Travaux et équipements, Coopérative scolaire, Cantine et temps périscolaire, Question des parents…)
+					<br>Les échanges ont lieu dans le respect de chacun.</p>
+				</div>
+
+				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+					<div class="icon_container d-flex flex-column justify-content-end">
+						<img src="images/mortarboard.svg" alt="">
+					</div>
+					<h3>Déroulé d'une commission Cantine</h3>
+					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+				</div>
+
+			</div>
+
+		</div>		
+	</div>
+
+
+{% endblock %}
