@@ -38,6 +38,56 @@ class PageController extends AbstractController
             'pages' => $pageRepository->findAll(),
         ]);
     }
+ 
+    /**
+     * @Route("/decouvrir", name="page_decouvrir", methods={"GET"})
+     */
+    public function decouvrir(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/decouvrir.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/sinformer", name="page_sinformer", methods={"GET"})
+     */
+    public function sinformer(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/sinformer.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/adherer", name="page_adherer", methods={"GET"})
+     */
+    public function adherer(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/adherer.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
+
+        /**
+     * @Route("/participer", name="page_participer", methods={"GET"})
+     */
+    public function participer(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/participer.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/creeruneliste", name="page_creeruneliste", methods={"GET"})
+     */
+    public function creeruneliste(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
+    {
+        return $this->render('page/creeruneliste.html.twig', [
+            'pages' => $pageRepository->findAll(),
+        ]);
+    }
 
     /**
      * @Route("/new", name="page_new", methods={"GET","POST"})

@@ -1,7 +1,20 @@
 {% extends 'base.html.twig' %}
-{% block title %}Les Indépendants - Page accueil{% endblock %}
+{% block title %}Les Indépendants - Maternelle{% endblock %}
+
+
 
 {% block body %}
+
+<!-- Home -->
+
+	<div class="courseshome">
+		<div class="courseshome_background_container prlx_parent">
+			<div class="courseshome_background prlx" style="background-image:url(http://127.0.0.1:8000/images/courses_background.jpg)"></div>
+		</div>
+		<div class="courseshome_content">
+			<h1>Maternelle</h1>
+		</div>
+	</div>
 
     <!-- Maternelle -->
 
@@ -10,7 +23,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h1>Maternelle</h1>
+						<h1>Listes</h1>
 					</div>
 				</div>
 			</div>
@@ -20,7 +33,7 @@
 				<!-- Maternelle 1 -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="#">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="#">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Petits Princes</a></div>
 							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
@@ -31,7 +44,7 @@
 				<!-- Maternelle 2 -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Rose de France</a></div>
 							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
@@ -42,7 +55,7 @@
 				<!-- Maternelle 3 -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Jean de la Fontaine</a></div>
 							<div class="card-text">Liste existante. Contacter la "tête" de liste.</div>
@@ -56,7 +69,7 @@
 				<!-- Maternelle 4 -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="#">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="#">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Vert Parc</a></div>
 							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
@@ -67,7 +80,7 @@
 				<!-- Maternelle 5 -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="https://unsplash.com/@cikstefan">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Madiba</a></div>
 							<div class="card-text">Pas de liste existante. Envie de créer une liste ?</div>
@@ -78,7 +91,7 @@
 				<!-- Maternelle 6 -->
 				<div class="col-lg-4 course_box">
 					{# <div class="card">
-						<img class="card-img-top" src="images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
+						<img class="card-img-top" src="http://127.0.0.1:8000/images/maternelle1.jpg" alt="https://unsplash.com/@dsmacinnes">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Jean de la Fontaine</a></div>
 							<div class="card-text">Liste existante. Contacter la "tête" de liste.</div>
@@ -86,92 +99,106 @@
 					</div> #}
 				</div>
 			</div>
-
-			<div class="row services_row">
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/earth-globe.svg" alt="">
-					</div>
-					<h3>Rejoindre les Indépendants</h3>
-					<p>Prenez contact directement auprès de la « tête de liste » de l’école de votre enfant (par mail de préférence).<br>
-						Cet échange sera l’occasion de vous informer sur le rôle des parents délégués et leur implication dans l’école<br>
-					</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/exam.svg" alt="">
-					</div>
-					<h3>Rejoindre une liste</h3>
-					<p>Vous pouvez nous rejoindre grâce à l’adhésion en ligne directement sur notre site.<br>
-					Une cotisation annuelle de 12 euros vous sera demandée afin de participer aux frais de fonctionnement de l’association.<br>
-					Bienvenu(e) !</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/books.svg" alt="">
-					</div>
-					<h3>Créer une liste</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/professor.svg" alt="">
-					</div>
-					<h3>Préparation des élections</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/blackboard.svg" alt="">
-					</div>
-					<h3>Déroulé des élections</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/mortarboard.svg" alt="">
-					</div>
-					<h3>Résultats des élections</h3>
-					<p>Les résultats seront affichés par le chef d’établissement.<br>
-					Le nombre de parents TITULAIRES est égal au nombre de CLASSES de l’établissement, se rajoutent ensuite un nombre égal de SUPPLEANTS.
-					<br>Le rôle des parents délégués va être alors de faire le lien entre les parents et l’école, informer, assister aux conseils d’école.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/professor.svg" alt="">
-					</div>
-					<h3>Préparation d'un conseil d'école</h3>
-					<p>Les CE sont au nombre de 3 dans l’année.<br>Le chef d’établissement fixe un ORDRE DU JOUR qu’il transmet aux parents de chaque liste, lesquels peuvent alors y ajouter les questions / points à soulever / thèmes à aborder.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/blackboard.svg" alt="">
-					</div>
-					<h3>Déroulé d'un conseil d'école</h3>
-					<p>Sont présents : Le chef d’établissement, les maîtres/esses, les atsem (maternelle), les parents d’élèves TITULAIRES de chaque fédération ( à défaut leurs suppléants ), un/des représentants de la mairie.
-					<br>Les différents THEMES sont abordés (Organisation et fonctionnement de l’école, Projets et actions pédagogiques, Travaux et équipements, Coopérative scolaire, Cantine et temps périscolaire, Question des parents…)
-					<br>Les échanges ont lieu dans le respect de chacun.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/mortarboard.svg" alt="">
-					</div>
-					<h3>Déroulé d'une commission Cantine</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-			</div>
-
 		</div>		
+	</div>
+
+	<!-- Fonctionnement -->
+	<div class="popular page_section">
+			<div class="container">
+
+				<div class="row">
+					<div class="col">
+						<div class="section_title text-center">
+							<h1>Fonctionnement</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="row services_row">
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-1.png" alt="">
+						</div>
+						<h3>Rejoindre les Indépendants</h3>
+						<p>Prenez contact directement auprès de la « tête de liste » de l’école de votre enfant (par mail de préférence).<br>
+							Cet échange sera l’occasion de vous informer sur le rôle des parents délégués et leur implication dans l’école<br>
+						</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-2.png" alt="">
+						</div>
+						<h3>Rejoindre une liste</h3>
+						<p>Vous pouvez nous rejoindre grâce à l’adhésion en ligne directement sur notre site.<br>
+						Une cotisation annuelle de 12 euros vous sera demandée afin de participer aux frais de fonctionnement de l’association.<br>
+						Bienvenu(e) !</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-3.png" alt="">
+						</div>
+						<h3>Créer une liste</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-4.png" alt="">
+						</div>
+						<h3>Préparation des élections</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-5.png" alt="">
+						</div>
+						<h3>Déroulé des élections</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-6.png" alt="">
+						</div>
+						<h3>Résultats des élections</h3>
+						<p>Les résultats seront affichés par le chef d’établissement.<br>
+						Le nombre de parents TITULAIRES est égal au nombre de CLASSES de l’établissement, se rajoutent ensuite un nombre égal de SUPPLEANTS.
+						<br>Le rôle des parents délégués va être alors de faire le lien entre les parents et l’école, informer, assister aux conseils d’école.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-7.png" alt="">
+						</div>
+						<h3>Préparation d'un conseil d'école</h3>
+						<p>Les CE sont au nombre de 3 dans l’année.<br>Le chef d’établissement fixe un ORDRE DU JOUR qu’il transmet aux parents de chaque liste, lesquels peuvent alors y ajouter les questions / points à soulever / thèmes à aborder.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-8.png" alt="">
+						</div>
+						<h3>Déroulé d'un conseil d'école</h3>
+						<p>Sont présents : Le chef d’établissement, les maîtres/esses, les atsem (maternelle), les parents d’élèves TITULAIRES de chaque fédération ( à défaut leurs suppléants ), un/des représentants de la mairie.
+						<br>Les différents THEMES sont abordés (Organisation et fonctionnement de l’école, Projets et actions pédagogiques, Travaux et équipements, Coopérative scolaire, Cantine et temps périscolaire, Question des parents…)
+						<br>Les échanges ont lieu dans le respect de chacun.</p>
+					</div>
+
+					<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="http://127.0.0.1:8000/images/Icones_page_etablissement-9.png" alt="">
+						</div>
+						<h3>Déroulé d'une commission Cantine</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+				</div>
+
+			</div>		
 	</div>
 
 	<!-- Adhérer -->
@@ -363,7 +390,232 @@
 		</div>
 	</div> #}
 
-	<!-- Events -->
+	<!-- Compte-rendus -->
+
+	<div class="elements">
+
+		<!-- Progress Bars and Accordions -->
+
+		<div class="pbars_accordions">
+			<div class="container">
+
+				<div class="row">
+					<div class="col">
+						<div class="section_title text-center">
+							<h1>Compte-rendus</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="row pbars_accordions_container">
+					<!-- Progress Bars & Accordions -->
+
+					<div class="col-lg-6">
+						
+						<!-- Accordions -->
+						<div class="elements_accordions">
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Conseils d'école.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Commissions Cantine.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Conseils d'école.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+
+						<!-- Accordions -->
+						<div class="elements_accordions">
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Conseils d'école.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Conseils d'école.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"> Compte-rendus Conseils d'école.</div>
+								<div class="accordion_panel">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venenatis ultrices, est libero mattis ante, ac consectetur diam neque eget quam.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- Loaders -->
+
+		{# <div class="loaders">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="elements_title">Loaders</div>
+					</div>
+				</div>
+
+				<div class="row elements_loaders_container">
+					<div class="col-lg-3 loader_col">
+						<!-- Loader -->
+						<div class="loader" data-perc="0.75"></div>
+						<div class="loader_text text-center">Photos Taken</div>
+						<div class="loader_sub text-center">Etiam nec odio vestibulum est.</div>
+					</div>
+					<div class="col-lg-3 loader_col">
+						<!-- Loader -->
+						<div class="loader" data-perc="0.83"></div>
+						<div class="loader_text text-center">Km Walked</div>
+						<div class="loader_sub text-center">Odio vestibulum est mattis.</div>
+						<span></span>
+					</div>
+					<div class="col-lg-3 loader_col">
+						<!-- Loader -->
+						<div class="loader" data-perc="0.25"></div>
+						<div class="loader_text text-center">Cities Visited</div>
+						<div class="loader_sub text-center">Vestibulum est mattis effic.</div>
+					</div>
+					<div class="col-lg-3 loader_col">
+						<!-- Loader -->
+						<div class="loader" data-perc="0.95"></div>
+						<div class="loader_text text-center">Cities Visited</div>
+						<div class="loader_sub text-center">Vestibulum est mattis effic.</div>
+					</div>
+				</div>
+
+			</div>
+		</div> #}
+		
+		<!-- Milestones -->
+		
+		{# <div class="milestones">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="elements_title">Milestones</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="milestones_container">
+				<div class="milestones_background" style="background-image:url(images/milestones_background.jpg)"></div>
+				
+				<div class="container">
+					<div class="row">
+						
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="images/milestone_1.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="750">0</div>
+								<div class="milestone_text">Current Students</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="images/milestone_2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="120">0</div>
+								<div class="milestone_text">Certified Teachers</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="images/milestone_3.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="39">0</div>
+								<div class="milestone_text">Approved Courses</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="images/milestone_4.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="3500" data-sign-before="+">0</div>
+								<div class="milestone_text">Graduate Students</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div> #}
+
+		<!-- Icon Boxes -->
+
+		{# <div class="icon_boxes">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="elements_title">Icon Boxes</div>
+					</div>
+				</div>
+
+				<div class="row icon_boxes_container">
+
+					<div class="col-lg-4 icon_box text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="images/earth-globe.svg" alt="">
+						</div>
+						<h3>Online Courses</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+					<div class="col-lg-4 icon_box text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="images/exam.svg" alt="">
+						</div>
+						<h3>Indoor Courses</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+					<div class="col-lg-4 icon_box text-left d-flex flex-column align-items-start justify-content-start">
+						<div class="icon_container d-flex flex-column justify-content-end">
+							<img src="images/books.svg" alt="">
+						</div>
+						<h3>Amazing Library</h3>
+						<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div> #}
+
+	</div>
+
+	<!-- Evènements -->
 
 	<div class="events page_section">
 		<div class="container">
@@ -371,7 +623,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h1>Upcoming Events</h1>
+						<h1>Evènements à venir</h1>
 					</div>
 				</div>
 			</div>

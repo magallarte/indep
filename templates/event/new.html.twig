@@ -3,7 +3,17 @@
 {% block title %}New Event{% endblock %}
 
 {% block body %}
-    <h1>Create new Event</h1>
+
+<!-- Home -->
+
+	<div class="courseshome">
+		<div class="courseshome_background_container prlx_parent">
+			<div class="courseshome_background prlx" style="background-image:url(http://127.0.0.1:8000/images/courses_background.jpg)"></div>
+		</div>
+		<div class="courseshome_content">
+			<h1>Créer un évènement</h1>
+		</div>
+	</div>  
 
     {{ include('event/_form.html.twig') }}
 
