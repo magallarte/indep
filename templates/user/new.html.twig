@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "adhesion.html.twig" %}
+{% block title %}Adhérent{% endblock %}
 
-{% block title %}New User{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new User</h1>
 
-    {{ include('user/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('user_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Adhérent - CREER UN PROFIL</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('user/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('user_index') }}">Retour à la liste des adhérents</a>
+
+     </div>
+
 {% endblock %}

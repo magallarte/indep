@@ -1,11 +1,36 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Nouveau type d'adhésion{% endblock %}
 
-{% block title %}New Membership{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Membership</h1>
 
-    {{ include('membership/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('membership_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Types d'adhésion - CREER</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('membership/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('membership_index') }}">Retour à la liste des types d'adhésion</a>
+
+     </div>
+
 {% endblock %}
+

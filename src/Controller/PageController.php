@@ -59,16 +59,6 @@ class PageController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/adherer", name="page_adherer", methods={"GET"})
-     */
-    public function adherer(PageRepository $pageRepository, Request $request,SessionInterface $session): Response
-    {
-        return $this->render('page/adherer.html.twig', [
-            'pages' => $pageRepository->findAll(),
-        ]);
-    }
-
         /**
      * @Route("/participer", name="page_participer", methods={"GET"})
      */

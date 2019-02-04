@@ -21,9 +21,12 @@ class Membership
      */
     private $type;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\User", mappedBy="membership", cascade={"persist", "remove"})
+     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="membership")
      */
+    // /**
+    //  * @ORM\OneToOne(targetEntity="App\Entity\User", mappedBy="membership", cascade={"persist", "remove"})
+    //  */
     private $user;
 
     public function getId(): ?int

@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Event{% endblock %}
+{% block title %}Nouvel Evènement{% endblock %}
 
 {% block body %}
 
-<!-- Home -->
+<!-- Haut de page -->
 
 	<div class="courseshome">
 		<div class="courseshome_background_container prlx_parent">
@@ -15,7 +15,14 @@
 		</div>
 	</div>  
 
-    {{ include('event/_form.html.twig') }}
+<!-- Formulaire -->
 
-    <a href="{{ path('event_index') }}">back to list</a>
+    <div class="container">
+       
+        <form class="form-group" method="post">
+        {{ include('event/_form.html.twig') }}
+        </form>
+        <a href="{{ path('event_index') }}">Retour à la liste des évènements</a>
+    </div>
+
 {% endblock %}

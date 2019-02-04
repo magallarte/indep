@@ -12,7 +12,7 @@ class SectionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('subtitle')
+            ->add('subtitle', TextType::class, array('label'  => 'Sous-titre :'))
             ->add('content')
             ->add('picture')
             ->add('position')

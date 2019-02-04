@@ -188,8 +188,35 @@ h6::selection
 }
 .form-control
 {
-	color: #ff6c40;
+	color: #17448b;
 }
+
+.custom-file-label { opacity: 0; }
+.custom-file-input { opacity: 1; }
+
+.col-form-label
+{
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	color: #a5a5a5 !important;
+}
+
+.btn
+{
+	width: 164px;
+	height: 42px;
+	border: none;
+	background: #ff6c40;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.btn:focus
+{
+	border: solid 2px #FFFFFF;
+}
+
 section
 {
 	display: block;

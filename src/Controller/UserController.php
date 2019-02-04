@@ -9,6 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 /**
  * @Route("/user")
@@ -28,17 +31,41 @@ class UserController extends AbstractController
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // $user = $form->getData();
+            // var_dump($user);
+            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($password);
+            $user->addRole("ROLE_USER");
+
+            // we upload the picture file and name it with the new user name
+            
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $user->getPicture();
+            // $file = $form->get('picture')->getData();
+            var_dump($file);
+            $fileName = $user->getSurname().'_'.$user->getName().'.'.$file->guessExtension();
+            // $fileName = $user->getSurname().'_'.$user->getName().'.jpeg';
+
+            // moves the file to the directory where images are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+            // updates the 'Picture' property to store the JPEG file name
+            // instead of its contents
+            $user->setPicture($fileName);
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
-
+            $this->addFlash('success', 'Votre compte à bien été enregistré.');
             return $this->redirectToRoute('user_index');
         }
 

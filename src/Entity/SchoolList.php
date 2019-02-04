@@ -19,12 +19,12 @@ class SchoolList
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\user", mappedBy="schoolList")
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="schoolList")
      */
     private $user;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\school", inversedBy="schoolList", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\School", inversedBy="schoolList", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $school;

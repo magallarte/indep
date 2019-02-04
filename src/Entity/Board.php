@@ -22,8 +22,11 @@ class Board
     private $mission;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="board")
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="board")
      */
+    // /**
+    //  * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="board")
+    //  */
     private $user;
 
     public function getId(): ?int

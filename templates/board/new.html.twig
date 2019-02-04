@@ -1,11 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Board{% endblock %}
+{% block title %}Nouveau Membre du Bureau{% endblock %}
 
 {% block body %}
-    <h1>Create new Board</h1>
 
-    {{ include('board/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('board_index') }}">back to list</a>
+	<div class="courseshome">
+		<div class="courseshome_background_container prlx_parent">
+			<div class="courseshome_background prlx" style="background-image:url(http://127.0.0.1:8000/images/courses_background.jpg)"></div>
+		</div>
+		<div class="courseshome_content">
+			<h1>Créer un membre du bureau</h1>
+		</div>
+	</div> 
+
+<!-- Formulaire -->    
+
+    <div class="container">
+       
+        <form class="form-group" method="post">
+        {{ include('board/_form.html.twig', {'button_label': 'Créer'}) }}
+        </form>
+        <a href="{{ path('board_index') }}">Retour à la liste des membres du bureau</a>
+    </div>
+
 {% endblock %}
+

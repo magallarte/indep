@@ -6,8 +6,13 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
+ * @ORM\Table(name="user")
+ * @UniqueEntity(fields="email")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface
@@ -21,6 +26,8 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
 
@@ -62,6 +69,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Image()
      */
     private $picture;
 
@@ -77,6 +85,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Type("integer")
      */
     private $zip_code;
 
@@ -90,15 +99,21 @@ class User implements UserInterface
      */
     private $school_list_position;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Membership", inversedBy="user", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Membership", inversedBy="user")
      */
+    // /**
+    //  * @ORM\OneToOne(targetEntity="App\Entity\Membership", inversedBy="user", cascade={"persist", "remove"})
+    //  * @ORM\JoinColumn(nullable=false)
+    //  */
     private $membership;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Board", mappedBy="user")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Board", inversedBy="user")
      */
+    // /**
+    //  * @ORM\OneToMany(targetEntity="App\Entity\Board", mappedBy="user")
+    //  */
     private $board;
 
     public function __construct()
@@ -151,6 +166,10 @@ class User implements UserInterface
         $this->roles = $roles;
 
         return $this;
+    }
+
+    public function addRole($role) {
+        $this->roles[] = $role;
     }
 
     /**
@@ -245,12 +264,12 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getPicture(): ?string
+    public function getPicture()
     {
         return $this->picture;
     }
 
-    public function setPicture(?string $picture): self
+    public function setPicture($picture): self
     {
         $this->picture = $picture;
 

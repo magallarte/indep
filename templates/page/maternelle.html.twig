@@ -1,20 +1,12 @@
 {% extends 'base.html.twig' %}
+{% use "maternelle.html.twig" %}
 {% block title %}Les Indépendants - Maternelle{% endblock %}
 
-
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-
-<!-- Home -->
-
-	<div class="courseshome">
-		<div class="courseshome_background_container prlx_parent">
-			<div class="courseshome_background prlx" style="background-image:url(http://127.0.0.1:8000/images/courses_background.jpg)"></div>
-		</div>
-		<div class="courseshome_content">
-			<h1>Maternelle</h1>
-		</div>
-	</div>
 
     <!-- Maternelle -->
 

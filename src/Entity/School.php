@@ -59,7 +59,7 @@ class School
     private $director_tel;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\kid", mappedBy="school")
+     * @ORM\OneToMany(targetEntity="App\Entity\Kid", mappedBy="school")
      */
     private $kid;
 
