@@ -44,23 +44,25 @@ class UserController extends AbstractController
             $user->setPassword($password);
             $user->addRole("ROLE_USER");
 
-            // we upload the picture file and name it with the new user name
+            $user->setUptodateMembershipFee(false);
+
+            // NE FONCTIONN PAS we upload the picture file and name it with the new user name
             
-            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $user->getPicture();
+            ///** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            // $file = $user->getPicture();
             // $file = $form->get('picture')->getData();
-            var_dump($file);
-            $fileName = $user->getSurname().'_'.$user->getName().'.'.$file->guessExtension();
+            // var_dump($file);
+            // $fileName = $user->getSurname().'_'.$user->getName().'.'.$file->guessExtension();
             // $fileName = $user->getSurname().'_'.$user->getName().'.jpeg';
 
             // moves the file to the directory where images are stored
-            $file->move(
-                $this->getParameter('pictures_directory'),
-                $fileName
-            );
+            // $file->move(
+            //     $this->getParameter('pictures_directory'),
+            //     $fileName
+            // );
             // updates the 'Picture' property to store the JPEG file name
             // instead of its contents
-            $user->setPicture($fileName);
+            // $user->setPicture($fileName);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

@@ -1,9 +1,29 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% extends 'base.html.twig' %}
+{% use "adhesion.html.twig" %}
+{% block title %}Adhérent{% endblock %}
+
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+
+<!-- Haut de page -->
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Adhérent - LISTE</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
 
     <table class="table">
         <thead>
@@ -54,4 +74,6 @@
     </table>
 
     <a href="{{ path('user_new') }}">Create new</a>
+
+    </div>
 {% endblock %}

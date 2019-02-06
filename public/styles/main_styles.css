@@ -186,6 +186,10 @@ h6::selection
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
 }
+
+/* FORMS */
+
+
 .form-control
 {
 	color: #17448b;
@@ -206,7 +210,6 @@ h6::selection
 	width: 164px;
 	height: 42px;
 	border: none;
-	background: #ff6c40;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 500;
@@ -215,6 +218,16 @@ h6::selection
 .btn:focus
 {
 	border: solid 2px #FFFFFF;
+}
+
+.btn-primary
+{
+	background: #ff6c40;
+}
+
+.btn-secondary
+{
+	background: #a5a5a5;
 }
 
 section
@@ -1789,12 +1802,12 @@ input:last-of-type
 .news
 {
 	width: 100%;
-	padding-top: 103px;
-	padding-bottom: 118px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .news_post
 {
-	margin-bottom: 85px;
+	margin-bottom: 50px;
 }
 .news_post:last-child
 {
@@ -2543,7 +2556,7 @@ input:last-of-type
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
-	background: #ff6c40;
+	/* background: #ff6c40; */
 	padding-top: 24px;
 	padding-bottom: 18px;
 	padding-left: 39px;

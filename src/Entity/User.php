@@ -119,7 +119,6 @@ class User implements UserInterface
     public function __construct()
     {
         $this->kid = new ArrayCollection();
-        $this->board = new ArrayCollection();
     }
 
     public function getId(): ?int
