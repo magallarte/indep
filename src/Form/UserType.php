@@ -3,12 +3,14 @@
 namespace App\Form;
 
 use App\Entity\User;
+use App\Entity\Membership;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -18,7 +20,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\OptionResolver\OptionResolver;
 use App\Form\KidType;
-use App\Form\MembershipType;
+// use App\Form\MembershipType;
 
 
 class UserType extends AbstractType
@@ -45,7 +47,7 @@ class UserType extends AbstractType
             //     'attr' => ['placeholder' => 'Choisir une photo']
             //     ))
             ->add('address', TextType::class, array('label'  => 'Adresse :'))
-            ->add('zip_code', TextType::class, array('label'  => 'Code Postal :'))
+            ->add('zip_code',IntegerType::class, array('label'  => 'Code Postal :'))
             ->add('city', TextType::class, array('label'  => 'Ville :'))
             // ->add('school_list_position')
             // ->add('schoolList')

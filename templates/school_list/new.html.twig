@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Liste{% endblock %}
 
-{% block title %}New SchoolList{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new SchoolList</h1>
 
-    {{ include('school_list/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('school_list_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Liste - CREER</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('school_list/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('school_list_index') }}">Retour à la liste des listes</a>
+
+     </div>
+
 {% endblock %}

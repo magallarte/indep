@@ -1,28 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Evènement{% endblock %}
 
-{% block title %}Nouvel Evènement{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
 
 <!-- Haut de page -->
 
-	<div class="courseshome">
-		<div class="courseshome_background_container prlx_parent">
-			<div class="courseshome_background prlx" style="background-image:url(http://127.0.0.1:8000/images/courses_background.jpg)"></div>
-		</div>
-		<div class="courseshome_content">
-			<h1>Créer un évènement</h1>
-		</div>
-	</div>  
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Evènement - CREER UN EVENEMENT</h1>
+					</div>
+				</div>
+			</div>
 
 <!-- Formulaire -->
 
     <div class="container">
-       
+        
         <form class="form-group" method="post">
         {{ include('event/_form.html.twig') }}
         </form>
+        <br>
         <a href="{{ path('event_index') }}">Retour à la liste des évènements</a>
-    </div>
+
+     </div>
 
 {% endblock %}

@@ -32,10 +32,15 @@ class SchoolClass
      */
     private $school;
 
+    // /**
+    //  * @ORM\ManyToOne(targetEntity="App\Entity\File", inversedBy="school_class")
+    //  */
+    // private $file;
+
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\File", inversedBy="school_class")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Document", inversedBy="school_class")
      */
-    private $file;
+    private $document;
 
     public function getId(): ?int
     {
@@ -91,6 +96,18 @@ class SchoolClass
     public function setFile(?File $file): self
     {
         $this->file = $file;
+
+        return $this;
+    }
+
+    public function getDocument(): ?Document
+    {
+        return $this->document;
+    }
+
+    public function setDocument(?Document $document): self
+    {
+        $this->document = $document;
 
         return $this;
     }

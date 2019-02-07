@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Lien vers un post{% endblock %}
 
-{% block title %}New Link{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Link</h1>
 
-    {{ include('link/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('link_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Lien vers un Post - CREER</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('link/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('link_index') }}">Retour à la liste des liens</a>
+
+     </div>
+
 {% endblock %}

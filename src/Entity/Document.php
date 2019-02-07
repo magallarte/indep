@@ -7,9 +7,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\DocumentRepository")
  */
-class File
+class Document
 {
     /**
      * @ORM\Id()
@@ -24,41 +24,42 @@ class File
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $content;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\User", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
     private $author;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\School", mappedBy="file")
+     * @ORM\OneToMany(targetEntity="App\Entity\School", mappedBy="document")
      */
     private $school;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\SchoolLevel", mappedBy="file")
+     * @ORM\OneToMany(targetEntity="App\Entity\SchoolLevel", mappedBy="document")
      */
     private $school_level;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\SchoolClass", mappedBy="file")
+     * @ORM\OneToMany(targetEntity="App\Entity\SchoolClass", mappedBy="document")
      */
     private $school_class;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Page", mappedBy="file")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Page")
      */
-    private $pages;
+    private $page;
 
     public function __construct()
     {
         $this->school = new ArrayCollection();
         $this->school_level = new ArrayCollection();
         $this->school_class = new ArrayCollection();
-        $this->pages = new ArrayCollection();
+        $this->page = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -83,7 +84,7 @@ class File
         return $this->content;
     }
 
-    public function setContent(string $content): self
+    public function setContent(?string $content): self
     {
         $this->content = $content;
 
@@ -95,7 +96,7 @@ class File
         return $this->author;
     }
 
-    public function setAuthor(?User $author): self
+    public function setAuthor(User $author): self
     {
         $this->author = $author;
 
@@ -114,7 +115,7 @@ class File
     {
         if (!$this->school->contains($school)) {
             $this->school[] = $school;
-            $school->setFile($this);
+            $school->setDocument($this);
         }
 
         return $this;
@@ -125,8 +126,8 @@ class File
         if ($this->school->contains($school)) {
             $this->school->removeElement($school);
             // set the owning side to null (unless already changed)
-            if ($school->getFile() === $this) {
-                $school->setFile(null);
+            if ($school->getDocument() === $this) {
+                $school->setDocument(null);
             }
         }
 
@@ -145,7 +146,7 @@ class File
     {
         if (!$this->school_level->contains($schoolLevel)) {
             $this->school_level[] = $schoolLevel;
-            $schoolLevel->setFile($this);
+            $schoolLevel->setDocument($this);
         }
 
         return $this;
@@ -156,8 +157,8 @@ class File
         if ($this->school_level->contains($schoolLevel)) {
             $this->school_level->removeElement($schoolLevel);
             // set the owning side to null (unless already changed)
-            if ($schoolLevel->getFile() === $this) {
-                $schoolLevel->setFile(null);
+            if ($schoolLevel->getDocument() === $this) {
+                $schoolLevel->setDocument(null);
             }
         }
 
@@ -176,7 +177,7 @@ class File
     {
         if (!$this->school_class->contains($schoolClass)) {
             $this->school_class[] = $schoolClass;
-            $schoolClass->setFile($this);
+            $schoolClass->setDocument($this);
         }
 
         return $this;
@@ -187,8 +188,8 @@ class File
         if ($this->school_class->contains($schoolClass)) {
             $this->school_class->removeElement($schoolClass);
             // set the owning side to null (unless already changed)
-            if ($schoolClass->getFile() === $this) {
-                $schoolClass->setFile(null);
+            if ($schoolClass->getDocument() === $this) {
+                $schoolClass->setDocument(null);
             }
         }
 
@@ -198,16 +199,15 @@ class File
     /**
      * @return Collection|Page[]
      */
-    public function getPages(): Collection
+    public function getPage(): Collection
     {
-        return $this->pages;
+        return $this->page;
     }
 
     public function addPage(Page $page): self
     {
-        if (!$this->pages->contains($page)) {
-            $this->pages[] = $page;
-            $page->addFile($this);
+        if (!$this->page->contains($page)) {
+            $this->page[] = $page;
         }
 
         return $this;
@@ -215,9 +215,8 @@ class File
 
     public function removePage(Page $page): self
     {
-        if ($this->pages->contains($page)) {
-            $this->pages->removeElement($page);
-            $page->removeFile($this);
+        if ($this->page->contains($page)) {
+            $this->page->removeElement($page);
         }
 
         return $this;

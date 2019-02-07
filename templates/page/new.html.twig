@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Page{% endblock %}
 
-{% block title %}New Page{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Page</h1>
 
-    {{ include('page/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('page_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Page - CREER</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('page/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('page_index') }}">Retour à la liste des pages</a>
+
+     </div>
+
 {% endblock %}

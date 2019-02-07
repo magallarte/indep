@@ -28,10 +28,10 @@ class Page
      */
     private $link;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\File", inversedBy="pages")
-     */
-    private $file;
+    // /**
+    //  * @ORM\ManyToMany(targetEntity="App\Entity\File", inversedBy="pages")
+    //  */
+    // private $file;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Section", mappedBy="page")

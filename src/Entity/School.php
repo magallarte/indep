@@ -78,10 +78,15 @@ class School
      */
     private $school_level;
 
+    // /**
+    //  * @ORM\ManyToOne(targetEntity="App\Entity\File", inversedBy="school")
+    //  */
+    // private $file;
+
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\File", inversedBy="school")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Document", inversedBy="school")
      */
-    private $file;
+    private $document;
 
     public function __construct()
     {
@@ -309,6 +314,18 @@ class School
     public function setFile(?File $file): self
     {
         $this->file = $file;
+
+        return $this;
+    }
+
+    public function getDocument(): ?Document
+    {
+        return $this->document;
+    }
+
+    public function setDocument(?Document $document): self
+    {
+        $this->document = $document;
 
         return $this;
     }

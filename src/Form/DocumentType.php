@@ -2,12 +2,12 @@
 
 namespace App\Form;
 
-use App\Entity\File;
+use App\Entity\Document;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FileType extends AbstractType
+class DocumentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -15,14 +15,14 @@ class FileType extends AbstractType
             ->add('title')
             ->add('content')
             ->add('author')
-            ->add('pages')
+            ->add('page')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => File::class,
+            'data_class' => Document::class,
         ]);
     }
 }

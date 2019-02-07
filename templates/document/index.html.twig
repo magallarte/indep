@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}File index{% endblock %}
+{% block title %}Document index{% endblock %}
 
 {% block body %}
-    <h1>File index</h1>
+    <h1>Document index</h1>
 
     <table class="table">
         <thead>
@@ -15,14 +15,14 @@
             </tr>
         </thead>
         <tbody>
-        {% for file in files %}
+        {% for document in documents %}
             <tr>
-                <td>{{ file.id }}</td>
-                <td>{{ file.title }}</td>
-                <td>{{ file.content }}</td>
+                <td>{{ document.id }}</td>
+                <td>{{ document.title }}</td>
+                <td>{{ document.content }}</td>
                 <td>
-                    <a href="{{ path('file_show', {'id': file.id}) }}">show</a>
-                    <a href="{{ path('file_edit', {'id': file.id}) }}">edit</a>
+                    <a href="{{ path('document_show', {'id': document.id}) }}">show</a>
+                    <a href="{{ path('document_edit', {'id': document.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('file_new') }}">Create new</a>
+    <a href="{{ path('document_new') }}">Create new</a>
 {% endblock %}
