@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
+{% use "admin.html.twig" %}
+{% block title %}Document{% endblock %}
 
-{% block title %}New Document{% endblock %}
+{% block top %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Document</h1>
 
-    {{ include('document/_form.html.twig') }}
+<!-- Haut de page -->
 
-    <a href="{{ path('document_index') }}">back to list</a>
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Document - CREER</h1>
+					</div>
+				</div>
+			</div>
+
+<!-- Formulaire -->
+
+    <div class="container">
+        
+        <form class="form-group" method="post">
+        {{ include('document/_form.html.twig') }}
+        </form>
+        <br>
+        <a href="{{ path('document_index') }}">Retour à la liste des documents</a>
+
+     </div>
+
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% use "admin.html.twig" %}
-{% block title %}Lien vers un post{% endblock %}
+{% block title %}Post{% endblock %}
 
 {% block top %}
 	{{ parent() }}
@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h1>Lien vers un Post - CREER</h1>
+						<h1>Post - CREER</h1>
 					</div>
 				</div>
 			</div>
@@ -25,10 +25,10 @@
     <div class="container">
         
         <form class="form-group" method="post">
-        {{ include('link/_form.html.twig') }}
+        {{ include('post/_form.html.twig') }}
         </form>
         <br>
-        <a href="{{ path('link_index') }}">Retour à la liste des liens</a>
+        <a href="{{ path('post_index') }}">Retour à la liste des posts</a>
 
      </div>
 

@@ -37,11 +37,11 @@ class UserType extends AbstractType
             // ->add('uptodate_membership_fee', HiddenType::class, array('data'  => 'NON'))
             
             // UPLOAD PICTURE NE FONCTIONNE PAS A CAUSE DU POIDS DES IMAGES TROP LOURD (Bug symfony 4.2)
-            // ->add('picture', FileType::class, array(
-            //     'label' => 'Photo :',
-            //     'required'=>null,
-            //     'attr' => ['placeholder' => 'Choisir une photo'],
-            //     'data_class' => null))
+            ->add('picture', FileType::class, array(
+                'label' => 'Photo :',
+                'required'=>null,
+                'attr' => ['placeholder' => 'Choisir une photo'],
+                'data_class' => null))
             // ->add('picture', FileType::class, array(
             //     'label' => 'Photo :',
             //     'attr' => ['placeholder' => 'Choisir une photo']

@@ -220,6 +220,13 @@ h6::selection
 	border: solid 2px #FFFFFF;
 }
 
+.validation-btn
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .btn-primary
 {
 	background: #ff6c40;
